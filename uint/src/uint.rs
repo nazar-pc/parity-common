@@ -251,10 +251,10 @@ macro_rules! uint_overflowing_binop {
 #[doc(hidden)]
 macro_rules! uint_full_mul_reg {
 	($name:ident, 8, $self_expr:expr, $other:expr) => {
-		$crate::uint_full_mul_reg!($name, 8, $self_expr, $other, |a, b| a != 0 || b != 0);
+		$crate::uint_full_mul_reg!($name, 8, $self_expr, $other, |a, b| a != 0 || b != 0)
 	};
 	($name:ident, $n_words:tt, $self_expr:expr, $other:expr) => {
-		$crate::uint_full_mul_reg!($name, $n_words, $self_expr, $other, |_, _| true);
+		$crate::uint_full_mul_reg!($name, $n_words, $self_expr, $other, |_, _| true)
 	};
 	($name:ident, $n_words:tt, $self_expr:expr, $other:expr, $check:expr) => {{
 		{
